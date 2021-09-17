@@ -23,15 +23,20 @@ body {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   overflow-x: hidden;
-  z-index: 0;
 }
 
 .wrapper {
-  width: 85%;
+  width: 100%;
   max-width: 1368px;
   margin: 0 auto;
   font-size: 1.6rem;
+  color: #fff;
+  text-align: center;
   font-family: "Arial", sans-serif;
 }
 
@@ -59,6 +64,21 @@ body {
   overflow: visible !important;
   width: auto !important;
   white-space: normal !important;
+}
+
+/* header */
+.header {
+  margin-bottom: 3.5rem;
+}
+
+/* lottery */
+.result {
+  display: flex;
+}
+
+.result__item {
+  font-size: 2rem;
+  margin: 0 1.5rem;
 }
 
 /* animations */
