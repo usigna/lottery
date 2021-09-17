@@ -1,0 +1,73 @@
+/* import */
+@import "./partials/normalize";
+
+/* general */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  scroll-behavior: smooth;
+  font-size: 62.25%;
+  background: #c31432;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 400% 400%;
+  animation: background 20s ease-in-out infinite;
+}
+
+body {
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+.wrapper {
+  width: 85%;
+  max-width: 1368px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  font-family: "Arial", sans-serif;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
+}
+
+/* animations */
+@keyframes background {
+  0% {
+    background-position: 0 50%;
+  } 50% {
+    background-position: 100% 50%;
+  } 100% {
+    background-position: 0 50%;
+  }
+}
